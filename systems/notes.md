@@ -1,20 +1,26 @@
-#Systems Level Programming Notes
+#Notes
+
+9/30/15
+
+*SOTD: One Headlight - The Wallflowers*
 
 **Aim: How to write functioning code**
 
-*Do Now:* Write a C program that does the following
-    
-    - Create a string and set it to some value
-    -  Write code to find the length of the string and then print it. (do not write a function for this)
+1. DN: Write a c program that does the following
 
-	```C
-	#include <stdio.h>
-	char s[256] = "swag";
-	int main(){
-	   printf("%s",s);
-	   return 0; 
-	}	
-	```
+   - Create a string and set it to some value.
+   - Write code to find the length of the string and then print it. (Do not write a function for this)
+
+   ```C
+   #include <stdio.h>
+   char s[256] = "swaggy"; 
+
+   int main(){
+       printf("%s", s);
+       return 0;
+   }
+   ```
+---
 
 **9.29.2015**
 
