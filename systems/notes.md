@@ -28,20 +28,20 @@ Aim: Time to stop stringing you along.
 
 The variable containing the array name is a pointer. No need to use ampersand when assigning a pointer to an array.
 
-    ```C	     
-    float fray[5];
-    float *fp = fray;
-    //pointer fp now refers to the same place as fray.
-    //fp - > 824
-    //*fp - > 2.3
-    ```
+     ```C	     
+     float fray[5];
+     float *fp = fray;
+     //pointer fp now refers to the same place as fray.
+     //fp - > 824
+     //*fp - > 2.3
+     ```
 
-    ```C	
-    *(ray + 2) = *(2 + ray);
-    //however, a[b] is simply shorthand for *(a + b)
-    //this means that
-    ray[2] = 2[ray];
-    ```
+     ```C	
+     *(ray + 2) = *(2 + ray);
+     //however, a[b] is simply shorthand for *(a + b)
+     //this means that
+     ray[2] = 2[ray];
+     ```
 
 Array variables CANNOT BE MODIFIED:
     ```C
