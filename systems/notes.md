@@ -9,7 +9,7 @@
     	2) Write code to find the length of the string and then print it. (do not write a function for this)
 
 	```C
-	
+	```
 
 **9.29.2015
 
@@ -23,20 +23,20 @@ The variable containing the array name is a pointer. No need to use ampersand wh
     //pointer fp now refers to the same place as fray.
     //fp - > 824
     //*fp - > 2.3
-    ```C
+    ```
 
     ```C	
     *(ray + 2) = *(2 + ray);
     //however, a[b] is simply shorthand for *(a + b)
     //this means that
     ray[2] = 2[ray];
-   ```C
+   ```
 
    Array variables CANNOT BE MODIFIED:
 	```C
 	ray++;
 	//DOES NOT COMPILE
-	```C
+	```
 
 C Strings (ctrings)
 Strings are character arrays that end with a null character (either ‘ ‘ or 0 or ‘\0’)
@@ -52,11 +52,11 @@ The follow are ways to declare strings:
     //Allocates 8 bytes, puts “Tuesday” in the first 7 bytes AND adds a null to the 8th byte.
     char *s = “Mankind”;
     //Allocates 8 bytes, puts “Mankind” in the first 7 bytes AND adds a null at the 8th byte. s is a pointer variable instead of an array
-    ```C
+    ```
 		
 You can only assign strings with = at declaration.
     ```C
 char s[] = “Zero”; // ok
 s = “seven” //NOT ok
-  ```C
+    ```
 This is the only time you can assign something to a String literal.
