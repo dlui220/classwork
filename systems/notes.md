@@ -1,17 +1,22 @@
-*Systems Level Programming Notes*
+#Systems Level Programming Notes
 
 **Aim: How to write functioning code**
 
-*Do Now:* Write a C program that does the following:
+*Do Now:* Write a C program that does the following
     
-	1) Create a string and set it to some value
-
-    	2) Write code to find the length of the string and then print it. (do not write a function for this)
+    - Create a string and set it to some value
+    -  Write code to find the length of the string and then print it. (do not write a function for this)
 
 	```C
+	#include <stdio.h>
+	char s[256] = "swag";
+	int main(){
+	   printf("%s",s);
+	   return 0; 
+	}	
 	```
 
-**9.29.2015
+**9.29.2015**
 
 Aim: Time to stop stringing you along.
 
