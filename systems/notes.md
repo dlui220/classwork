@@ -8,8 +8,8 @@
 
 1. DN: Write a c program that does the following
 
-   - Create a string and set it to some value.
-   - Write code to find the length of the string and then print it. (Do not write a function for this)
+- Create a string and set it to some value.
+- Write code to find the length of the string and then print it. (Do not write a function for this)
 
    ```C
    #include <stdio.h>
@@ -41,13 +41,13 @@ The variable containing the array name is a pointer. No need to use ampersand wh
     //however, a[b] is simply shorthand for *(a + b)
     //this means that
     ray[2] = 2[ray];
-   ```
+    ```
 
-   Array variables CANNOT BE MODIFIED:
-	```C
-	ray++;
-	//DOES NOT COMPILE
-	```
+Array variables CANNOT BE MODIFIED:
+    ```C
+    ray++;
+    //DOES NOT COMPILE
+    ```
 
 C Strings (ctrings)
 Strings are character arrays that end with a null character (either ‘ ‘ or 0 or ‘\0’)
