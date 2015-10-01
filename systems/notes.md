@@ -1,6 +1,29 @@
 #Notes
 
-9/30/15
+**10/1/15**
+*SOTD: Tom Sawyer - Rush*
+
+**Aim: How to write function code(2)**
+
+asdf.h contains header files
+```C
+#include "customlib.h"
+```
+
+You can rename types (type definitions)
+
+```C
+//Useful Ctring commands
+int strcmp(char *s1, char *s2)
+
+char * strcpy(char *dest, char *source)
+
+char * strcat(char *s1, char *s2)
+```
+
+---
+
+**9/30/15**
 
 *SOTD: One Headlight - The Wallflowers*
 

@@ -11,7 +11,8 @@ def index():
 @app.route("/reset")
 def reset():
     session['n'] = False
-    return redirect(url_for('login'))
+    return render_template("logout.html")
+    #return redirect(url_for('login'))
 
 @app.route("/secret")
 def secret():
@@ -22,6 +23,8 @@ def secret():
 
 @app.route("/login", methods=["GET","POST"])
 def login():
+    if session['n'] == True:
+        return render_template("success.html")
     if request.method == "GET":
         return render_template("login.html")
     else:
@@ -31,7 +34,7 @@ def login():
         pword = request.form['password']
         button = request.form['button']
         if button == "cancel":
-            return render_template('login.html')
+            return render_template('about.html')
 
         if utils.authenticate(uname,pword):
             session['n'] = True
