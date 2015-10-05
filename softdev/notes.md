@@ -2,7 +2,7 @@
 
 **10/1/15**
 
-``Python
+```Python
 f = open("data.dat",'w')
 f.write("HELLO\n")
 f.close()
@@ -16,3 +16,8 @@ for l in f.readline():
 
 s = f.readlines()
 print s
+
+import shelve
+d = {}
+d = shelve.open("shelf.dat")
+```
