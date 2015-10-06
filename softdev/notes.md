@@ -1,5 +1,11 @@
 #Notes
 
+**10/6/15**
+We're going to be using SQLite3, a library, as a database
+Database is a collection of tables
+
+---
+
 **10/1/15**
 
 ```Python
