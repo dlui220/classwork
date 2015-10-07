@@ -1,5 +1,58 @@
 #Notes
 
+
+*//SOTD: Fake Plastic Trees - Radiohead*
+*SOTD: Rearviewmirror - Pearl Jam*
+
+**Aim: Make it so**
+
+1. Seperate compilation
+   
+   - You can combine multiple C files into a C program by including them all
+     in one gcc command
+
+   - You cannot have duplicate function or global variable names across 
+     those files, including the int main() function
+
+```C
+gcc -c
+//This will compile a C file into an .o file. It's not a fully functional
+//program, but it's compiled. Do this to compile .c files that don't have a
+//main() function
+```
+
+- You can compile faster if you want to compile a c file and an o file because 
+  o files won't be recompiled. The general format is to gcc -c the library files
+  and then gcc the main.c and the .o files at the same time. This way, if any
+  changes are made to your main.c file, you don't need to change any other files
+
+Ex: dwstring.h, dwstring.c, main.c, dwstring.o, and a.out
+
+- dwstring.c changes = dwstring.o and a.out change 
+  (a.out is dependent on dwstring.o)
+
+- main.c changes = a.out changes
+  (a.out dependent on main.c)
+
+- dwstring.h changes = everything changes  
+    
+
+2. Make
+
+   - Create compiling instructions and setup dependencies
+   
+   - Standard name for the file is makefile
+
+   - Syntax:
+
+    ```C
+    <TARGET>: <DEPENDENCIES>
+    [TAB]<RULES>
+    //Has to be a single tab, not 4 spaces
+    ```
+
+---
+
 **10/1/15**
 *SOTD: Tom Sawyer - Rush*
 
