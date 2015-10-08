@@ -28,8 +28,15 @@ the timestamp (updated)
 
 - Now that we know how to use "make" files, our work should now include it.
 
-- Can choose separate functions in terminal by running "make run", "make clean",
-  etc.
+- Can choose separate functions in terminal by running "make run", "make clean", etc
+
+2. Dynamic Memory Allocation
+   
+malloc( int x )
+- Allocates x bytes of memory (from the heap)
+- Returns the address at the beginning of the allocation
+- Returns a void *, always typecast to the correct pointer type.
+
 ---
 
 *//SOTD: Fake Plastic Trees - Radiohead*
