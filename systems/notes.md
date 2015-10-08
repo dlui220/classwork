@@ -9,7 +9,7 @@ File dependencies for compiling:
                   \    /
                    a.out
 
-More stuff with "make"
+1. More stuff with "make"
 
 - Running "make" runs the "makefile" file, no extensions
 
@@ -30,16 +30,26 @@ the timestamp (updated)
 
 - Can choose separate functions in terminal by running "make run", "make clean", etc
 
-Dynamic Memory Allocation
+2. Dynamic Memory Allocation
    
-    malloc( int x )
-    - Allocates x bytes of memory (from the heap)
-    - Returns the address at the beginning of the allocation
-    - Returns a void *, always typecast to the correct pointer type.
+   - malloc( int x )
+     - Allocates x bytes of memory (from the heap)
+     - Returns the address at the beginning of the allocation
+     - Returns a void *, always typecast to the correct pointer type.
     
 ```C
 int *p;
-p = (int *)malloc( 20 );
+p = (int *)malloc( 5 * sizeof(int) );
+```
+
+   - calloc(int n, int x)
+     - Allocates n * x bytes of memory
+     - Ensures that each bit is set to 0
+     - Works like malloc in all other ways
+
+```C
+int *p;
+p = (int *)calloc(5, sizeof(int));
 ```
 
 ---
