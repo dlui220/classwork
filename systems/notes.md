@@ -1,13 +1,39 @@
 #Notes
+**Aim: If you can't (al)locate your memory...I forget**
+
+1. File dependencies for compiling:
 
     dwstring.c   dwstring.h   main.c
-          \    /        \     /     
+          \       /    \     /     
          dwstring.o     main.o
-                 \     /
-                  a.out
+                  \    /
+                   a.out
+
+2. More stuff with "make"
+
+- Running "make" runs the "makefile" file, no extensions
+
+- Instead of writing a.out in the makefile, you can use "all" to always run
+the command.
+
+- You can also specify a target: "make dwstring.o"  to run the line dwstring.o
+
+- "touch" - if it doesn't exist, file is made, and if it does, modifies
+the timestamp (updated)
+
+- You can have a "clean" function, to remove pesky files like ~ files.
+
+- In the "all" function, you can have "gcc -o string_test dwstring.o main.o"
+  in order to customize the filename.
+
+- Now that we know how to use "make" files, our work should now include it.
+
+- Can choose separate functions in terminal by running "make run", "make clean",
+  etc.
 ---
 
 *//SOTD: Fake Plastic Trees - Radiohead*
+
 *SOTD: Rearviewmirror - Pearl Jam*
 
 **Aim: Make it so**
