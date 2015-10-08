@@ -1,7 +1,7 @@
 #Notes
 **Aim: If you can't (al)locate your memory...I forget**
 
-1. File dependencies for compiling:
+File dependencies for compiling:
 
     dwstring.c   dwstring.h   main.c
           \       /    \     /     
@@ -9,7 +9,7 @@
                   \    /
                    a.out
 
-2. More stuff with "make"
+1. More stuff with "make"
 
 - Running "make" runs the "makefile" file, no extensions
 
