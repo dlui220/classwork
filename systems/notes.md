@@ -33,9 +33,9 @@ the timestamp (updated)
 2. Dynamic Memory Allocation
    
    - malloc( int x )
-     - Allocates x bytes of memory (from the heap)
-     - Returns the address at the beginning of the allocation
-     - Returns a void *, always typecast to the correct pointer type.
+    - Allocates x bytes of memory (from the heap)
+    - Returns the address at the beginning of the allocation
+    - Returns a void *, always typecast to the correct pointer type.
     
 ```C
 int *p;
@@ -43,13 +43,24 @@ p = (int *)malloc( 5 * sizeof(int) );
 ```
 
    - calloc(int n, int x)
-     - Allocates n * x bytes of memory
-     - Ensures that each bit is set to 0
-     - Works like malloc in all other ways
+    - Allocates n * x bytes of memory
+    - Ensures that each bit is set to 0
+    - Works like malloc in all other ways
 
 ```C
 int *p;
 p = (int *)calloc(5, sizeof(int));
+```
+
+   - realloc(void *p, int x)
+    - Changes the amount of memory allocated to a given block
+    - p must be a pointer to the beginning of an allocated block of memory, but it does not have to be the original pointer
+    - If x is smaller than the original size of the allocation, the extra bytes will be released.
+
+```C
+int *p;
+p = (int *)malloc(20);
+p = (int *)realloc(p,40);
 ```
 
 ---
