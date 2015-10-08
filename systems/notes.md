@@ -9,7 +9,7 @@ File dependencies for compiling:
                   \    /
                    a.out
 
-1. More stuff with "make"
+More stuff with "make"
 
 - Running "make" runs the "makefile" file, no extensions
 
@@ -30,9 +30,9 @@ the timestamp (updated)
 
 - Can choose separate functions in terminal by running "make run", "make clean", etc
 
-2. Dynamic Memory Allocation
+Dynamic Memory Allocation
    
-malloc( int x )
+   malloc( int x )
 - Allocates x bytes of memory (from the heap)
 - Returns the address at the beginning of the allocation
 - Returns a void *, always typecast to the correct pointer type.
