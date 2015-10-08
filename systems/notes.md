@@ -1,14 +1,10 @@
 #Notes
 
-dwstring.c   dwstring.h   main.c
-
-      \    /        \     /     
-
-     dwstring.o     main.o
-
-             \     /
-
-              a.out
+    dwstring.c   dwstring.h   main.c
+          \    /        \     /     
+         dwstring.o     main.o
+                 \     /
+                  a.out
 ---
 
 *//SOTD: Fake Plastic Trees - Radiohead*
