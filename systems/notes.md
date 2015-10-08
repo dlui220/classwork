@@ -32,10 +32,15 @@ the timestamp (updated)
 
 Dynamic Memory Allocation
    
-   malloc( int x )
-- Allocates x bytes of memory (from the heap)
-- Returns the address at the beginning of the allocation
-- Returns a void *, always typecast to the correct pointer type.
+    malloc( int x )
+    - Allocates x bytes of memory (from the heap)
+    - Returns the address at the beginning of the allocation
+    - Returns a void *, always typecast to the correct pointer type.
+    
+```C
+int *p;
+p = (int *)malloc( 20 );
+```
 
 ---
 
