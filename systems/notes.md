@@ -1,5 +1,15 @@
 #Notes
 
+dwstring.c   dwstring.h   main.c
+
+      \    /        \     /     
+
+     dwstring.o     main.o
+
+             \     /
+
+              a.out
+---
 
 *//SOTD: Fake Plastic Trees - Radiohead*
 *SOTD: Rearviewmirror - Pearl Jam*
