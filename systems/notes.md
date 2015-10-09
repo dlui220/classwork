@@ -1,4 +1,28 @@
 #Notes
+
+*10/9/15*
+**Aim: **
+
+1. Dynamic Memory Allocation
+  - Normal memory allocation happens on the stack
+  - Stack memory gets released as function pops off
+  - Dynamic memory is located on the heap, it persists even after the function that created it pops off the stack
+  - You must manually release dynamically allocated memory from the heap
+2. free
+  - Releases dynamically allocated memory
+  - Takes one parameter, a pointer to the beginning of a dynamically allocated block of memory
+  - EVery call to malloc/calloc should have a corresponding call to free
+
+```C
+int *p;
+p = (int *(malloc(20));
+free(p);
+```
+
+
+---
+
+*10/8/15*
 **Aim: If you can't (al)locate your memory...I forget**
 
 File dependencies for compiling:
