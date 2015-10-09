@@ -19,6 +19,25 @@ p = (int *(malloc(20));
 free(p);
 ```
 
+3. Typedef
+  - PRovide a new name for an existing data type
+
+```C
+typedef <real type> <new name>;
+
+ex:
+   typedef unsigned int size_t;
+   size_t x = 139; // x is really an unsigned int;
+```
+
+4. Struct
+  - A collection of values in a single data type
+
+```C
+
+struct { int a; char x; } s;
+
+```
 
 ---
 
