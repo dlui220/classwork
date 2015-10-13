@@ -35,6 +35,23 @@ node * insert_front( node * front, int i){
 }
 ```
 
+```C
+//Creating a linked list in main
+
+int main(){
+   node *n = 0; //like creating a null leading node
+
+   n = insert_front( n,0 );
+   n = insert_front( n,1 );
+   n = insert_front( n,2 );
+   n = insert_front( n,3 );
+
+   print_list(n);
+
+   return 0;
+}
+```
+
 ---
 
 *10/9/15*
