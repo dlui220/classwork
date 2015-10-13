@@ -1,5 +1,24 @@
 #Notes
 
+*10/13/15*
+**Aim: Zelda's in trouble, get Link!**
+1. Do Now:
+   - What's wrong with this function? (assume node has been declared correctly)
+
+```C
+node * insert_front( node * n, int i ) {
+
+   node new; //new is not a pointer, but an actual struct
+   new.i = i;
+   new.next = n;
+
+   return &new;
+}
+//Leads to Segmentation Fault, accessing data we aren't supposed to
+```
+
+---
+
 *10/9/15*
 **Aim: **
 
@@ -20,7 +39,7 @@ free(p);
 ```
 
 3. Typedef
-  - PRovide a new name for an existing data type
+  - Provide a new name for an existing data type
 
 ```C
 typedef <real type> <new name>;
@@ -34,9 +53,20 @@ ex:
   - A collection of values in a single data type
 
 ```C
+//Regular Struct
+struct { int a; char x; } s;\
 
-struct { int a; char x; } s;
+//Like a template for struct
+struct foo {int a; char c; };
+struct foo s;
 
+//Integrating typedef
+typedef struct {int a; char c;} fool
+foo *t;
+t = (foo *)malloc( sizeof(foo) ); //Similar to constructor in Java
+
+(*t).a = 97;
+t->c = '@';
 ```
 
 ---
