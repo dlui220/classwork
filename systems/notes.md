@@ -2,19 +2,37 @@
 
 *10/13/15*
 **Aim: Zelda's in trouble, get Link!**
+
 1. Do Now:
    - What's wrong with this function? (assume node has been declared correctly)
 
 ```C
-node * insert_front( node * n, int i ) {
+node * insert_front( node * front, int i ) {
 
    node new; //new is not a pointer, but an actual struct
    new.i = i;
-   new.next = n;
+   new.next = front;
 
    return &new;
 }
 //Leads to Segmentation Fault, accessing data we aren't supposed to
+```
+
+2. Once Stack memory (statically allocated memory) is popped off, the memory allocated is released, hence we are left with a Seg Fault
+
+3. We have to Dynamically allocate memory so it'll persist after stack is popped off.
+
+```C
+//Working Code
+node * insert_front( node * front, int i){
+    node *new;
+    new = (node *)malloc( sizeof(node) );
+
+    new->i = i;
+    new->next=front;
+
+    return new;
+}
 ```
 
 ---
