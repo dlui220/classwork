@@ -1,4 +1,27 @@
 #Notes
+*10/15/15*
+**Common problems we may encounter on project**
+
+```C
+//link_list.h
+
+typedef struct n{
+
+// ...
+
+} song_node;
+//...
+
+//library.h
+#include "link_list.h"
+void print_artist(song_node *);
+```
+- Redeclaring things is NOT something we want to do.
+
+
+
+---
+
 
 *10/13/15*
 **Aim: Zelda's in trouble, get Link!**
