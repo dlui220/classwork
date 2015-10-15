@@ -25,9 +25,33 @@ void print_artist(song_node *);
 ```
 
 - Redeclaring things is NOT something we want to do.
+- # is a preprocessor instruction
+   - before your code is properly compiled, THESE things will happen
 
+- #define FOO value
+   - we don't have to give it a value
+   - if you think of #include as a copy/paste
+   - #define is a replacement
+   - ex: #define FOO 27
+       - ex, all instances of FOO will be replaced with 27
+   - you can put a chunk of C code in the #define if you want 
 
-
+- #ifndef FOO
+   - if not defined, do all of the actions in between until #endif
+   - ex:
+```C
+//link_list.h
+#ifndef LINK_LIST_H
+#define LINK_LIST_H
+typedef struct n{
+} song_node;
+#endif
+```
+- If LINK_LIST_H is not defined, then define it.
+   - Since LINK_LIST_H is already defined after importing it from linklist.h in the main , it won't be redefined again after importing library.h
+   - Order of #include in main file doesn't matter
+   - We don't have to include a value, we just use it to determine whether or not a group of things has been defined already
+   
 ---
 
 
