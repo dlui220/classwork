@@ -15,7 +15,15 @@ typedef struct n{
 //library.h
 #include "link_list.h"
 void print_artist(song_node *);
+
+//main.c
+#include "link_list.h"
+#include "library.h"
+//If we include library.h, it recopies all of the linked list stuff
+//will give an ERROR, due to duplicate functions (caused by adding link_list.h
+//to library.h)
 ```
+
 - Redeclaring things is NOT something we want to do.
 
 
