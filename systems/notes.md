@@ -25,18 +25,21 @@ void print_artist(song_node *);
 ```
 
 - Redeclaring things is NOT something we want to do.
-- # is a preprocessor instruction
+- "#" is a preprocessor instruction
    - before your code is properly compiled, THESE things will happen
 
-- #define FOO value
+- "#define FOO value"
    - we don't have to give it a value
-   - if you think of #include as a copy/paste
+   - if you think of include as a copy/paste
    - #define is a replacement
-   - ex: #define FOO 27
+   - ex:
+   ```C
+   #define FOO 27
+   ```
        - ex, all instances of FOO will be replaced with 27
-   - you can put a chunk of C code in the #define if you want 
+   - you can put a chunk of C code in the define if you want 
 
-- #ifndef FOO
+- "#ifndef FOO"
    - if not defined, do all of the actions in between until #endif
    - ex:
 ```C
