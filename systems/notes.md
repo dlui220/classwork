@@ -1,4 +1,47 @@
 #Notes
+
+
+**10/21/15**
+
+**Aim: Opening up a whole new world of possibilities**
+
+*Note: Don't compile .h files!*
+
+1. File Table
+   - A list of all files used by a program while it is running
+   - Contains basic information like the file's location and size
+   - The file table has a limited size, which is a power of 2 and commonly 256.
+   - getdtablesize() will return this value
+   - Each file is given an integer index, starting at 0, this is referred to as the file descriptor
+   - There are 3 files always open in the table
+     - 0 or STDIN_FILENO: stdin
+	 - 1 or STDOUT_FILENO: stdout
+	 - 2 or STDERR_FILENO: stderr
+	 
+   - open - <fcntl.h>
+     - Add a file to the file table and return its file descriptor
+	 - If open fails, -1 is returned, extra error information can be found in errno
+	   - errno is an int variable tha can be found in <errno.h>, using strerror (in string.h) on errno will return a string description of the error
+
+   - open( <PATH>, <FLAGS>, <MODE> )
+     - mode
+	   - Only used when creating a file. Set the new file's permissions using a 3 digit octal #
+	   - Octal #s have a leading 0
+	     - 0644, 0777 ...
+	 - flags
+	   - determine what you plan to do with the file
+	   - user the following constants:
+	     - O_RDONLY
+		 - O_WRONLY
+		 - O_RDWR
+		 - O_APPEND
+		 - O_TRUNC
+		 - O_CREAT
+		 - O_EXCL : When combined with CREAT, will return an error if the file exists.
+
+
+---
+
 *10/15/15*
 **Common problems we may encounter on project**
 
