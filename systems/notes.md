@@ -1,5 +1,52 @@
 #Notes
 
+**10/22/15**
+
+*~a brief interlude~*
+
+1. bitwise operators
+  - &: bitwise and
+  - |: bitwise or
+  - ~: bitwise not
+  - ^: bitwise xor
+
+  - Logical operators work on each bit of a value
+     - char c = 13; // 0000101
+	 - char x = ~c; // 1111010
+
+2. Flags
+  - Each flag is a number, to combine flags we use bitwise or
+```C
+O_WRONLY = 1           00000001
+O_APPEND = 8           00001000
+O_WRONLY | O _APPEND   00001001
+```
+  - Note we're using bitwise or. It checks the 0's and 1's of each statement to get the final representation
+
+
+3. close - <unistd.h>
+  - Remove a file from the file table
+  - Returns 0 if successful, returns -1 and sets errno if unsuccessful.
+  - close(<file descriptor>)
+
+
+4. read - <unistd.h>
+  - reads in data from a file
+  - read( <file descriptor>, <buffer>, <amount> )
+  - read (fd, buff, n)
+  - read n bytes from the fd's file and put that data into buff
+  - returns the number of bytes actually read. Returns -1 and sets errno if unsuccessful
+  - buff has to be a pointer otherwise it can't be modified
+
+```C
+char b1[100];
+fd1 = open("foo", O_RDONLY);
+b = read (fd1, b1, 5);
+fd2 = open( "goo", O_CREAT | O_WRONLY | O_TRUNC, 0644);
+b = write (fd2, b2, sizeof(b2));
+
+```
+---
 
 **10/21/15**
 
