@@ -1,4 +1,37 @@
 #Notes
+**10/28/15**
+**Aim: I need information, stat!**
+1. Metadata - information provided to you about files (data about data, not contained within the data
+   - stat - <sys/stat.h>
+      - Get information about a file (metadata)
+	  - stat(<PATH>,<STAT BUFFER>)
+	  - Buffer has to be a pointer so it can be modified
+	  
+	  ```C
+	  struct stat sb; //sb for stat buffer
+	  stat("foo",&sb);
+	  ```
+
+      - STAT BUFFER
+	     - must be a pointer to a struct stat
+		 - all the file information gets put into the stat buffer
+		 - some of the fields in struct stat:
+		 ```C
+		 st_size // file size in bytes
+		 st_uid, st_gid // user id, group id
+		 st_mode // file permissions
+		 
+		 st_atime, st_mtime //last access, last modification
+	 	 ```
+		 - These are struct time_t variables. We can use functions in time.h to ake sense of them
+		 - ctime(<struct time_t *>
+		    - returns time as a string
+	     - time(<struct time_t *>)
+		    - sets the parameter to the current time
+
+
+---
+
 
 **10/22/15**
 
