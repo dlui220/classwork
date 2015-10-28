@@ -1,4 +1,47 @@
 #Notes
+**10/28/15**
+
+1. When branch is made on github:
+
+```
+git branch gh  //create branch
+git checkout gh // switch branch
+git pull
+git branch --set-upstream-to=origin/gh gh
+```
+   - the set-upstream command makes it so you can push/pull
+   - we don't use this command when we only want to work locally
+
+2. Once we add a new file to the branch, we can "Compare and Pull Request"
+   - master is now updated, we can pull and it'll be there
+
+3. Making a new branch in the command line
+   - git branch cli
+   - you have to then git pull, git upstream, git push -u, etc
+   - follow instructions to add the command-line branch to github
+
+4. Merging
+
+```
+git checkout master
+git pull
+git checkout mybranch
+git pull
+git merge master
+git push
+*insert work*
+commit + push
+pull request
+```
+
+  - "pull" tries to merge and fetch - type of shorthand
+  - "merge" just merges
+  - "fetch" just fetches
+
+  - disadvantage of "merge" is that we don't get text comments, comparison, etc
+  
+---
+
 
 **10/6/15**
 
