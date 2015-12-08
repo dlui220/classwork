@@ -20,8 +20,21 @@
 	 - IPC_STAT: populate buffer with information about the semaphore (requires DATA)
       - DATA:
       	 - variable for setting/storing information about the semaphore (data type: union semun)
+	 - a union is only as large as the largest data member inside
+
+
+```C
+union semun {
+  int val;
+  struct semid_ds *buf;
+  unsigned short  *array;
+  struct seminfo  *__buf;
+};
+```
+
 	 
       
+---
 
 **10/28/15**
 **Aim: I need information, stat!**
