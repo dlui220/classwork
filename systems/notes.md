@@ -32,6 +32,33 @@ union semun {
 };
 ```
 
+```C
+int main(int argc, char **argv){
+    int key = ftok("makefile",'b');
+    int semid;
+
+    if (strcmp( argv[0], "-c")==0){
+       semid = semget(key, 1, 0644 | IPC_CREAT);
+       union semun su;
+       su.val = 3;
+       semctl(semid,0,SETVAL,su);
+       printf("semaphore created: %d\n",semid);
+    }
+
+    if(strcmp(argv[0],"-v") == 0){
+       semid = semget(key,1,0644);
+       int v = semctl(semid,0,GETVAL);
+       printf("current value: %d\n",v);
+    }      
+    
+    if(strcmp(argv[0],"-r) == 0){
+       semid = semget(key,1,0644);
+       int v = semctl(semid,0,IPC_RMID);
+       printf("semaphore created:%d\n",v);
+    }      
+        
+```
+
 	 
       
 ---
