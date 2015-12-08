@@ -1,22 +1,25 @@
 #Notes
 **12/8/15**
 **Aim: What's a semaphore? **
+
 1.semctl
    - control the sempahore, including:
       - setting the semaphore value
       - removing the semaphore
       - getting the current value
       - getting info about the semaphore
-   - semctl(<descriptor>,<index>,<operation>,<data>)
-      - descriptor: the return value of semget
-      - index: the index of the semaphore you want to control in the semaphore set identified by the descriptor
+   - semctl(DESCRIPTOR,INDEX,OPERATION,DATA)
+      - DESCRIPTOR: the return value of semget
+      - INDEX: the index of the semaphore you want to control in the semaphore set identified by the descriptor
          - for a single semaphore set, 0.
-      - operation: one of the following constants (there are others as well)
+      - OPERATION: one of the following constants (there are others as well)
          - IPC_RMID: remove the semaphore
 	 - SETVAL: set the value (requires DATA)
 	 - SETALL: set the value of every semaphore in the set (requires DATA)
 	 - GETVAL: return the value
 	 - IPC_STAT: populate buffer with information about the semaphore (requires DATA)
+      - DATA:
+      	 - variable for setting/storing information about the semaphore (data type: union semun)
 	 
       
 
