@@ -45,7 +45,7 @@ int main(){
 
    //the key is to create this struct and then call semop
    struct sembuf sb;
-   sb.sem_num =0;
+   sb.sem_num = 0;
    sb.sem_flg = SEM_UNDO;
    sb.sem_op = -1;
 
@@ -55,6 +55,7 @@ int main(){
       printf("I'm in!\n");
 	  sleep(1);
    }
+   
    sb.sem_op = 1;
    //just change the value in the struct and return the operation
    semop( semid, &sb, 1 );
@@ -62,7 +63,7 @@ int main(){
    return 0;
 }
 ```
-
+  - Use the amount of bytes in shared memory to know how much to read from the last file
 
 ---
 
