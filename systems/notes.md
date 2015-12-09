@@ -1,6 +1,18 @@
 #Notes
 **12/9/15**
-*Aim:*
+
+*Aim: more semaphore code*
+
+1. semop
+   - Perform semaphore operations (like Up/Down)
+   - All operations performed via semop are atomic!
+   - semop(DESCRIPTOR,OPERATION,AMOUNT)
+      - DESCRIPTOR:
+	     - you know what this is...
+	  - AMOUNT:
+	     - The amount of semaphores you want to operate on in the semaphore set
+		 - For a single semaphore set, 1.
+
 
 
 ---
