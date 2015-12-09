@@ -15,6 +15,7 @@
 	  - OPERATION:
 	     - A pointer to a struct sembuf value
 		 
+		 
 		 ```C
 		 struct sembuf {
 		    short sem_op;
