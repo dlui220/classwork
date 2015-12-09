@@ -1,6 +1,13 @@
 #Notes
+**12/9/15**
+*Aim:*
+
+
+---
+
 **12/8/15**
-**Aim: What's a semaphore? **
+*Aim: What's a semaphore?*
+
 
 1.semctl
    - control the sempahore, including:
@@ -53,7 +60,7 @@ int main(int argc, char **argv){
     
     if(strcmp(argv[0],"-r) == 0){
        semid = semget(key,1,0644);
-       int v = semctl(semid,0,IPC_RMID);
+       int r = semctl(semid,0,IPC_RMID);
        printf("semaphore created:%d\n",v);
     }      
         
