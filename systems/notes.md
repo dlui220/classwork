@@ -12,7 +12,16 @@
 	  - AMOUNT:
 	     - The amount of semaphores you want to operate on in the semaphore set
 		 - For a single semaphore set, 1.
-
+	  - OPERATION:
+	     - A pointer to a struct sembuf value
+		 
+		 ```C
+		 struct sembuf {
+		    short sem_op;
+			short sem_num;
+			short sem_flg;
+		 }
+		 ```
 
 
 ---
@@ -22,7 +31,7 @@
 
 
 1.semctl
-   - control the sempahore, including:
+   - control the semaphore, including:
       - setting the semaphore value
       - removing the semaphore
       - getting the current value
