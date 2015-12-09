@@ -14,10 +14,6 @@
 		 - For a single semaphore set, 1.
 	  - OPERATION:
 	     - A pointer to a struct sembuf value
-		 
-
-
-
 		 ```C
 		 struct sembuf {
 		    short sem_op;
