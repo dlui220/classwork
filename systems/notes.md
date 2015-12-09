@@ -22,20 +22,46 @@
 		 }
 		 ```
 
-         - sem_num:
+         - **sem_num:**
 		    - The index of the semaphore you want to work on
-		 - sem_op:
+		 - **sem_op:**
 		    - -1: Down(S)
 			- 1: Up(S)
 			   - Any -/+ number will work, you will be requesting/releasing that value from the semaphore.
-	     - sem_flg:
+	     - **sem_flg:**
 		    - Provide further options:
 			- SEM_UNDO:
 			   - Allow the OS to undo the given operation. Useful in the event that a program exits before it could release a semaphore.
 			- IPC_NOWAIT:
 			   - Instead of waiting for the semaphore to be available, return an error
 			   
+```C
+int main(){
+   int key = ftok("makefile",'a');
+   int semid;
 
+   semid = semget(key,1,0644);
+   printf("Before access...\n");
+
+   //the key is to create this struct and then call semop
+   struct sembuf sb;
+   sb.sem_num =0;
+   sb.sem_flg = SEM_UNDO;
+   sb.sem_op = -1;
+
+   semop( semid, &sb, 1 );
+   int i = 10;
+   while( i-- ) {
+      printf("I'm in!\n");
+	  sleep(1);
+   }
+   sb.sem_op = 1;
+   //just change the value in the struct and return the operation
+   semop( semid, &sb, 1 );
+   
+   return 0;
+}
+```
 
 
 ---
