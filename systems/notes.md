@@ -13,7 +13,7 @@
 	     - The amount of semaphores you want to operate on in the semaphore set
 		 - For a single semaphore set, 1.
 	  - OPERATION:
-	     - A pointer to a struct sembuf value
+	     - A pointer to a struct sembuf value:
 		 ```C
 		 struct sembuf {
 		    short sem_op;
@@ -28,6 +28,13 @@
 		    - -1: Down(S)
 			- 1: Up(S)
 			   - Any -/+ number will work, you will be requesting/releasing that value from the semaphore.
+	     - sem_flg:
+		    - Provide further options:
+			- SEM_UNDO:
+			   - Allow the OS to undo the given operation. Useful in the event that a program exits before it could release a semaphore.
+			- IPC_NOWAIT:
+			   - Instead of waiting for the semaphore to be available, return an error
+			   
 
 
 
