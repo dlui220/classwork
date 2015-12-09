@@ -23,6 +23,14 @@
 		 }
 		 ```
 
+         - sem_num:
+		    - The index of the semaphore you want to work on
+		 - sem_op:
+		    - -1: Down(S)
+			- 1: Up(S)
+			   - Any -/+ number will work, you will be requesting/releasing that value from the semaphore.
+
+
 
 ---
 
