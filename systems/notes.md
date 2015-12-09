@@ -6,7 +6,7 @@
 1. semop
    - Perform semaphore operations (like Up/Down)
    - All operations performed via semop are atomic!
-   - semop(DESCRIPTOR,OPERATION,AMOUNT)
+   - semop(*DESCRIPTOR,OPERATION,AMOUNT*)
       - DESCRIPTOR:
 	     - you know what this is...
 	  - AMOUNT:
@@ -15,7 +15,9 @@
 	  - OPERATION:
 	     - A pointer to a struct sembuf value
 		 
-		 
+
+
+
 		 ```C
 		 struct sembuf {
 		    short sem_op;
