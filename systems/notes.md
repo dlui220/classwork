@@ -11,6 +11,14 @@
   - You can transfer any data you like through a pipe using read/write
   - Unnamed pipes have no external identification (like a descriptor or name)
   - pipe - &lt;unistd.h&gt;
+    - Creates an unnamed pipe.
+	- Returns 0 if the pipe was created, -1 if not.
+	- Opens both ends of pipe as files.
+	- pipe( int descriptors[2] )
+	  - descriptors
+	     - array that will contain the descriptors for each end of the pipe
+
+
 ---
 
 **12/9/15**
