@@ -1,4 +1,15 @@
 #Notes
+**12/14/15**
+
+*Aim: Ceci n'est pas une pipe*
+
+1. Pipe
+  - A conduit between 2 seperate processes
+  - Pipes have 2 ends, a read end and a write end
+  - Pipes are unidirectional (a single pipe must be either read or write only ina  process)
+
+---
+
 **12/9/15**
 
 *Aim: more semaphore code*
