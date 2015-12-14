@@ -88,7 +88,8 @@ int main(){
   - mkfifo
     - Shell command to make a FIFO
 	- $ mkfifo &lt;pipe name&gt;
-	
+  - Named pipes look like files when created, and can be treated like files
+
 
 
 ---
