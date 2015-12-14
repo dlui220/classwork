@@ -6,8 +6,9 @@
 1. Pipe
   - A conduit between 2 seperate processes
   - Pipes have 2 ends, a read end and a write end
-  - Pipes are unidirectional (a single pipe must be either read or write only ina  process)
-
+  - Pipes are unidirectional (a single pipe must be either read or write only in a  process)
+  - Pipes act just like files.
+  - You can transfer any data you like through a pipe using read/write.
 ---
 
 **12/9/15**
