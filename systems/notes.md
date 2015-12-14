@@ -9,7 +9,8 @@
   - Pipes are unidirectional (a single pipe must be either read or write only in a  process)
   - Pipes act just like files.
   - You can transfer any data you like through a pipe using read/write
-  
+  - Unnamed pipes have no external identification (like a descriptor or name)
+  - pipe - &lt;unistd.h&gt;
 ---
 
 **12/9/15**
