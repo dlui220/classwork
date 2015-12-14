@@ -84,6 +84,11 @@ int main(){
 2. Named Pipes
   - Also known as FIFOs.
   - Same as unnamed pipes except FIFOs have a name that can be used to identify them via different programs.
+  - Unidirectional, like unnamed pipes.
+  - mkfifo
+    - Shell command to make a FIFO
+	- $ mkfifo &lt;pipe name&gt;
+	
 
 
 ---
