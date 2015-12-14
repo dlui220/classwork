@@ -60,7 +60,7 @@ int main(){
    if ( f == 0 ) { //if f is 0 it is the child
       close( fds[0] );
 	  //sets child to write end by closing other end
-
+	  printf("Enter some text");
       fgets( line, sizeof(line), stdin );
 	  write( fds[1], line, sizeof(line) );
 	  close( fds[1] );
@@ -70,7 +70,7 @@ int main(){
       close( fds[1] );
 	  //close writing end
 	  read( fds[0], line, sizeof(line) );
-	  printf("parent read: %f\n", q);
+	  printf("parent read: [%s]\n", line);
    }
 
    return 0;
