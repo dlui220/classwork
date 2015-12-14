@@ -39,7 +39,38 @@ int main(){
 	  //close writing end
 	  float q;
 	  read( fds[0], &q, sizeof(q) );
-	  printf("parent red: %f\n", q);
+	  printf("parent read: %f\n", q);
+   }
+
+   return 0;
+
+}
+```
+- Alternatively:
+
+```C
+int main(){
+
+   int fds[2];
+   int f;
+   char line[100];
+   
+   pipe(fds);
+   f = fork();
+   if ( f == 0 ) { //if f is 0 it is the child
+      close( fds[0] );
+	  //sets child to write end by closing other end
+
+      fgets( line, sizeof(line), stdin );
+	  write( fds[1], line, sizeof(line) );
+	  close( fds[1] );
+   }
+
+   else {
+      close( fds[1] );
+	  //close writing end
+	  read( fds[0], line, sizeof(line) );
+	  printf("parent read: %f\n", q);
    }
 
    return 0;
