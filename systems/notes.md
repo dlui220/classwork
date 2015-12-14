@@ -81,6 +81,10 @@ int main(){
 //Have child take data from user, send to parent, and then back to child->user
 ```
 
+2. Named Pipes
+  - Also known as FIFOs.
+  - Same as unnamed pipes except FIFOs have a name that can be used to identify them via different programs.
+
 
 ---
 
