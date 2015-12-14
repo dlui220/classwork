@@ -76,6 +76,9 @@ int main(){
    return 0;
 
 }
+
+//Example of usage:
+//Have child take data from user, send to parent, and then back to child->user
 ```
 
 
