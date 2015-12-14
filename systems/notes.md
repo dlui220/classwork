@@ -18,6 +18,35 @@
 	  - descriptors
 	     - array that will contain the descriptors for each end of the pipe
 
+```C
+int main(){
+
+   int fds[2];
+   int f;
+   
+   pipe(fds);
+   f = fork();
+   if ( f == 0 ) { //if f is 0 it is the child
+      close( fds[0] );
+	  //sets child to write end by closing other end
+	  float p = 123.347;
+	  write( fds[1], &p. sizeof(p) );
+	  close( fds[1] );
+   }
+
+   else {
+      close( fds[1] );
+	  //close writing end
+	  float q;
+	  read( fds[0], &q, sizeof(q) );
+	  printf("parent red: %f\n", q);
+   }
+
+   return 0;
+
+}
+```
+
 
 ---
 
