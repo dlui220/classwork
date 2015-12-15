@@ -19,7 +19,7 @@ int main() {
    e = mkfifo("mario",0644);
    printf("<server> Pipe created: %d\n",e);
 
-   from\_client = open( "mario", O\_RDONLY);
+   from_client = open( "mario", O_RDONLY);
    printf("<server> connection open\n");
 
    read( from_client, line, sizeof( line ) );
@@ -32,6 +32,19 @@ int main() {
 }
 ```
 
+```C
+int main() {
+   int to_server;
+   char line[100];
+   to_server = open( "mario", O_WRONLY );
+   printf("<client> connection opened\n");
+
+   printf("<client> enter stuff: ");
+   fgets( line, sizeof(line), stdin );
+
+   return 0;
+}
+```
 **12/14/15**
 
 *Aim: Ceci n'est pas une pipe*
