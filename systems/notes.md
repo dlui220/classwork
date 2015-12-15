@@ -10,6 +10,22 @@
 	- Once created, the FIFO acts like a regular file, and we can use open, read, write, and close on it
 	- mkfifo( &lt;name&gt;, &lt;permissions&gt; )
 
+```C
+int main() {
+   int from_client;
+   int e;
+
+   e = mkfifo("mario",0644);
+   printf("<server> Pipe created: %d\n",e);
+
+   from\_client = open("mario",O\_RDONLY);
+   printf("<server> connection open\n");
+
+   return 0
+
+}
+```
+
 **12/14/15**
 
 *Aim: Ceci n'est pas une pipe*
