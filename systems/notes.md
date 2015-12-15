@@ -36,12 +36,16 @@ int main() {
 int main() {
    int to_server;
    char line[100];
+   
    to_server = open( "mario", O_WRONLY );
    printf("<client> connection opened\n");
 
    printf("<client> enter stuff: ");
    fgets( line, sizeof(line), stdin );
 
+   write( to_server, line, sizeof(line) );
+   close( to_server );
+   
    return 0;
 }
 ```
