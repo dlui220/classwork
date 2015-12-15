@@ -14,13 +14,19 @@
 int main() {
    int from_client;
    int e;
+   char line[100];
 
    e = mkfifo("mario",0644);
    printf("<server> Pipe created: %d\n",e);
 
-   from\_client = open("mario",O\_RDONLY);
+   from\_client = open( "mario", O\_RDONLY);
    printf("<server> connection open\n");
 
+   read( from_client, line, sizeof( line ) );
+   printf( "<server> read: [%s]\n", line );
+   //reading doesn't care about terminating null
+
+   close(from_client);
    return 0
 
 }
