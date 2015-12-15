@@ -1,4 +1,14 @@
 #Notes
+**12/15/15**
+
+*Aim: A pipe by any other name...*
+
+1. Named Pipes
+  - mkfifo - &lt;sys/types.h&gt; %lt;sys/stat.h%gt;
+    - C function to create a FIFO
+	- Returns 0 on success and -1 on failure
+	- Once created, the FIFO acts like a regular file, and we can use open, read, write, and close on it
+
 **12/14/15**
 
 *Aim: Ceci n'est pas une pipe*
