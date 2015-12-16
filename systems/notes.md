@@ -15,6 +15,37 @@
 	  5. Client waits for private pipe connection
 	  6. Server receives clients message and removes the WKP
 	  7. Server connects to client pipe, sending an initial acknowledgement message.
+	  8.
+
+```C
+int server_handshake( int *from_client ){
+  int to_client;
+  char buffer[100];
+
+  mkfifo( "mario", 0644); //Create well-known pipe
+  *from_client = open( "mario", O_RDONLY ); //Listening pipe
+
+  read( *from_client, buffer, sizeof(buffer) );
+  printf("<server> connection request: [%s]\n", buffer);
+  remove("mario");
+
+  to_client = open(buffer,O_WRONLY);
+  write(message)
+
+  return to_client;
+}
+
+
+int main() {
+  int to_client;
+  int from_client;
+  char buffer[100];
+
+  to_client = server_handshake( &from_client );
+
+  return 0;
+}
+```
 
 ---
 
