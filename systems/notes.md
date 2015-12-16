@@ -1,4 +1,23 @@
 #Notes
+**12/16/16**
+
+*Aim: Always remember to tip your servers*
+
+1. Server/Client Program Paradigms
+  - Handshake
+    - A procedure to ensure that a connection has been established
+	- Both ends of the connection must verify that they can send and receive data to and from each other
+	- Basic Handshake Procedure
+	  1. Server creates a named pipe (well known pipe)
+	  2. Server waits for a connection
+	  3. Client creates a "private" named pipe
+	  4. Client connects to server and sends the private pipe name.
+	  5. Client waits for private pipe connection
+	  6. Server receives clients message and removes the WKP
+	  7. Server connects to client pipe, sending an initial acknowledgement message.
+
+---
+
 **12/15/15**
 
 *Aim: A pipe by any other name...*
