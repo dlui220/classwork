@@ -22,3 +22,8 @@ Derrick:
 Maria:
   - Geo tag on a regular
   - General view of area based on people that have been there
+
+Ideas:
+  - Connect thrift shops and buyers
+  - Renting expensive clothes
+  
