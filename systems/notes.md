@@ -15,7 +15,7 @@
 	  5. Client waits for private pipe connection
 	  6. Server receives clients message and removes the WKP
 	  7. Server connects to client pipe, sending an initial acknowledgement message.
-	  8.
+	  8. ?
 
 ```C
 int server_handshake( int *from_client ){
