@@ -1,4 +1,11 @@
 #Notes
+**12/18/15**
+
+Basic Server
+   1. Basic Handshake
+   2. Server gets data from client, "processes" it and sends back a response
+   3. Once the client exits, the server recreates a new well-known pipe, removes the old client connections and the steps restart.
+
 **12/16/16**
 
 *Aim: Always remember to tip your servers*
