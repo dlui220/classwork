@@ -27,7 +27,7 @@ OSI 7-Layer Model
   - A basic history of wired connections
     - Thicknet
 	  - A single Coaxial cable runs throughout the network, "vampire taps" go into the cable and leech the data out
-	-Thinnet
+	- Thinnet
 	  - A 
 
 
