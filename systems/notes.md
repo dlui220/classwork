@@ -21,6 +21,15 @@ OSI 7-Layer Model
 
 - If you are working on a particular layer, you should not have to think too much about the other layers.
 
+1. Physical Layer
+  - How computers are physically connected
+  - Things like electrons running across wires, radio signals pulsing through the air...
+  - A basic history of wired connections
+    - Thicknet
+	  - A single Coaxial cable runs throughout the network, "vampire taps" go into the cable and leech the data out
+	-Thinnet
+
+
 
 
 ---
