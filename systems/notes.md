@@ -32,10 +32,10 @@ OSI 7-Layer Model
 	- Thinnet
 	  - A single Coaxial cable runs throughout the network, T-Junctions used to splice connections
 	  
-  - In Thicknet and Thinnet, all data is sent to all computers.
-  - Each computer added increases the power drain on the entire system, degrading service
-  - Token Ring
-    - Each computer is connected in a ring to each other.
+    - In Thicknet and Thinnet, all data is sent to all computers.
+    - Each computer added increases the power drain on the entire system, degrading service
+    - Token Ring
+      - Each computer is connected in a ring to each other.
 
 
 
