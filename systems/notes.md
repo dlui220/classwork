@@ -22,6 +22,7 @@ OSI 7-Layer Model
 - If you are working on a particular layer, you should not have to think too much about the other layers.
 
 1. Physical Layer
+
   - How computers are physically connected
   - Things like electrons running across wires, radio signals pulsing through the air...
   
@@ -30,6 +31,7 @@ OSI 7-Layer Model
 	  - A single Coaxial cable runs throughout the network, "vampire taps" go into the cable and leech the data out
 	- Thinnet
 	  - A single Coaxial cable runs throughout the network, T-Junctions used to splice connections
+	  
   - In Thicknet and Thinnet, all data is sent to all computers.
   - Each computer added increases the power drain on the entire system, degrading service
   - Token Ring
